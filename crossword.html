@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Black Bear Cinemas Crossword      
+        </title>
+        <meta name='author' content = 'ryan shanz'>
+        <link rel="stylesheet" href="styles.css">
+    
+    </head>   
+    <body>
+        <p class="link"><a href="index.html"><- Back</a></p>
+        <header>
+        Black Bear Cinemas Crossword
+        </header>
+    <section id="main">
+    <section id="game-container">
+        <div class="puzzle-grid">
+            <div class="row" id="row1">
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell" maxlength="1" contenteditable="true" id="input1" >
+                    1
+                </div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+            </div>
+            <div class="row" id="row2">
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell_letter" contenteditable= "true"  maxlength="1">
+                </div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell" contenteditable= "true"  maxlength="1" id="input2">
+                    2
+                </div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+            </div>
+            <div class="row" id="row3">
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell_letter" contenteditable= "true"  maxlength="1"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell_letter" contenteditable= "true"  maxlength="1"> </div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+
+            </div>
+            <div class="row" id="row4">
+
+                <div class = "cell" contenteditable= "true" maxlength="1">
+                3
+                </div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                     
+
+                </div>
+                <div class="cell inactive"></div>
+                <div class = "cell" contenteditable= "true" maxlength="1">4</div>
+                <div class = "cell" contenteditable= "true"  id="input5" maxlength="1">
+                    5
+                </div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                </div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1"></div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                </div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1"> </div>
+                <div class = "cell_letter" contenteditable= "true"  maxlength="1"></div>
+
+            </div>
+            <div class="row" id="row5">
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                </div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                </div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                </div>
+                <div class="cell inactive"></div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+            </div>
+            <div class="row" id="row6">
+                <div class = "cell" contenteditable= "true" maxlength="1">6</div> 
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                </div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                </div>
+                <div class = "cell_letter" contenteditable= "true" maxlength="1">
+                </div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class = "cell_letter" contenteditable= "true"  maxlength="1"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+                <div class="cell inactive"></div>
+            </div>
+            </div>
+        </section>
+        <section id="clues">
+            <h2 id="clues-title">Clues</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Direction</th>
+                        <th>Clue</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Down</td>
+                        <td><em>The ______</em>, starring Nicolas Cage</td>
+                        <td><button id="show-answers-btn1">
+                                Show Answer
+                            </button>
+                            <div id="answer1">Surfer</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Down</td>
+                        <td>Florence ____, starring in <em>Thunderbolts</em></td>
+                        <td><button id="show-answers-btn2">
+                                Show Answer
+                            </button>
+                            <div id="answer2">Pugh</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Down</td>
+                        <td>How many <em>Accountant</em> movies have been made?</td>
+                        <td><button id="show-answers-btn3">
+                                Show Answer
+                            </button>
+                            <div id="answer3">Two</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Across</td>
+                        <td>Director of <em>Sinners</em>, <em>Creed</em>, and <em>Black Panther</em></td>
+                        <td><button id="show-answers-btn4">
+                                Show Answer
+                            </button>
+                            <div id="answer4">Coogler</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Down</td>
+                        <td>Hedwig</td>
+                        <td><button id="show-answers-btn5">
+                                Show Answer
+                            </button>
+                            <div id="answer5">Owl</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Across</td>
+                        <td>____World in <em>A Minecraft Movie</em></td>
+                        <td><button id="show-answers-btn6">
+                                Show Answer
+                            </button>
+                            <div id="answer6">Over</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<script src="scripts.js"></script>
+</body>
+
+</html>

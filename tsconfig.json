@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "moduleDetection": "force",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "types": ["node"],
+      "esModuleInterop": true,
+      "module": "es6",
+      "lib": ["dom","es6"]
+      
+    },
+    "files": [
+      "scripts.ts"
+    ]
+  }

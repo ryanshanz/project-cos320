@@ -1,0 +1,281 @@
+//References: 
+// https://www.w3schools.com/css/css_grid.asp
+// https://www.geeksforgeeks.org/how-to-create-crossword-puzzle-using-html-and-css/#
+
+$font: "SourceCodePro";
+$bg: #2c2a2a;
+$cinema-blue: #006fc3;
+$white: white;
+
+@font-face {
+  font-family: $font;
+  src: url(SourceCodePro-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $bg;
+  color: $white;
+  font-family: $font;
+}
+
+
+header {
+  color: $white;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+
+  h1 {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+#body_index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header_index {
+  text-align: center;
+  padding: 10px;
+}
+
+img .logo {
+  display: block;
+  margin: auto;
+}
+
+#main_game_links {
+  display: flex;
+  padding: 100px 30% 0 30%;
+
+  > a {
+    text-align: center;
+    flex: 50%;
+    margin: auto;
+  }
+}
+
+.link {
+    padding: 10px;
+
+    text-align: left;
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+#buttons {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  input {
+    text-align: center;
+    align-items: center;
+    display: inline;
+    margin: 10px;
+    padding: 7px;
+  }
+}
+
+#submit-button,
+#reset-button {
+background-color: $cinema-blue;
+  border: 1px solid #0077CC;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $white;
+  cursor: pointer;
+  font-size: 17px;
+  gap: 10px;
+
+  &:active {
+    border-color: #006DBC;
+    outline: none;
+  }
+}
+
+#main-grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  padding: 10px;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+
+  .row {
+    display: grid;
+    grid-template-columns: 200px repeat(3, 200px);
+    align-items: center;
+    > div[contenteditable] {
+      background-color: $white;
+      border-radius: 10px;
+      outline: none;
+      border: 1px solid black;
+      text-align: center;
+      font-size: 16px;
+      padding: 10px;
+      width: 200px;
+      height: 70px;
+      box-sizing: border-box;
+      color: black;
+
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+      }
+    }
+  }
+
+  #column-headers {
+    display: grid;
+    grid-template-columns: 200px repeat(4, 190px);
+    font-weight: bold;
+
+    > div {
+      text-align: center;
+      width: 205px;
+    }
+  }
+
+  .actor {
+    font-weight: bold;
+    font-size: large;
+    padding: 30px;
+  }
+}
+
+#result {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+#main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#game-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  min-height: 50vh;
+  align-items: center;
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-rows: repeat(6, 40px);
+  color: black;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(13, 40px);
+}
+
+.cell,
+.cell_letter {
+  width: 40px;
+  height: 40px;
+  background-color: $white;
+  border: 1px solid black;
+  font-size: medium;
+  color: black;
+}
+
+.inactive {
+  background-color: $cinema-blue;
+}
+
+#clues {
+  color: $white;
+
+  #clues-title {
+    padding: 5px;
+  }
+}
+
+button {
+  display: block;
+  padding: 5px;
+  background-color: $cinema-blue;
+  color: $white;
+  border-radius: 5px;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: #062e67;
+    cursor: pointer;
+  }
+}
+
+#answer1, #answer2, #answer3, #answer4, #answer5, #answer6 {
+  visibility: hidden;
+  color: $cinema-blue;
+}
+
+#show-answers-btn1:hover ~ #answer1,
+#show-answers-btn2:hover ~ #answer2,
+#show-answers-btn3:hover ~ #answer3,
+#show-answers-btn4:hover ~ #answer4,
+#show-answers-btn5:hover ~ #answer5,
+#show-answers-btn6:hover ~ #answer6 {
+  visibility: visible;
+}
+
+td, th {
+  border: 1px solid $white;
+  text-align: left;
+  padding: 8px;
+}
+
+@media screen and (max-width: 480px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    width: 100%;
+    min-height: 40vh;
+  }
+
+  .puzzle-grid {
+    grid-template-rows: repeat(6, 27px);
+  }
+
+  .row {
+    grid-template-columns: repeat(13, 27px);
+  }
+
+  .cell,
+  .cell_letter {
+    width: 27px;
+    height: 27px;
+  }
+
+  ol {
+    line-height: 1rem;
+    font-size: 10px;
+  }
+
+  .clues {
+    max-width: 100%;
+  }
+}
